@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom radial gradient for vignette */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, transparent, transparent, rgba(0, 0, 0, 0.7));
+}
