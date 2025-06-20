@@ -4,7 +4,8 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import { FaCarSide, FaHeart, FaFire } from 'react-icons/fa';
 import ReactHowler from 'react-howler';
-
+import carImage from '/car.webp';
+import congratsSong from '/song.mp3';
 const CongratsPage = () => {
   const [revealed, setRevealed] = useState(false);
 
@@ -12,7 +13,7 @@ const CongratsPage = () => {
     <div className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
       {/* Music starts after reveal */}
       {revealed && (
-        <ReactHowler src="/song.mp3" playing={true} loop={true} volume={0.5} />
+        <ReactHowler src={congratsSong} playing={true} loop={true} volume={0.5} />
       )}
 
       {/* Vignette overlay */}
@@ -81,7 +82,7 @@ const CongratsPage = () => {
             className="mx-auto max-w-md border-4 border-yellow-500 rounded-xl overflow-hidden shadow-xl hover:shadow-yellow-400 transition-shadow duration-300"
           >
             <img
-              src="/car.webp"
+              src={carImage} 
               alt="Toyota Low Rider"
               className="w-full object-cover"
             />
